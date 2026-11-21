@@ -1,0 +1,6 @@
+/privacy       /clearprop/privacy  301
+/privacy.html  /clearprop/privacy  301
+/support       /clearprop/support  301
+/support.html  /clearprop/support  301
+/part107/*     /clearprop/:splat   301
+/part107       /clearprop/         301
