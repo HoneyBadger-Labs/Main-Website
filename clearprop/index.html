@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Clear Prop — Legal Pages</title>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -19,24 +22,38 @@ h1{font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;font
 .card:hover{border-color:#34332E}
 .btn{display:inline-block;padding:11px 22px;border-radius:3px;font-weight:600;font-size:14px;background:#F4F2EC;color:#0A0A09;transition:opacity .15s}
 .btn:hover{opacity:.88}
+
+/* Site header (matches index.html) */
+.nav{position:sticky;top:0;z-index:100;border-bottom:1px solid #1E1E1A;background:rgba(12,12,11,0.95);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);font-family:'Inter',system-ui,sans-serif;line-height:1.6}
+.nav a{text-decoration:none}
+.nav-inner{max-width:1160px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.nav .nav-logo{display:flex;align-items:center;gap:10px;color:#F2EFE6}
+.nav-logo-mark{width:52px;height:52px;object-fit:contain}
+.nav-wordmark{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:18px;letter-spacing:0.08em;text-transform:uppercase;line-height:1}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav .nav-links a{font-size:14px;font-weight:500;color:#9B9888;transition:color .15s;letter-spacing:0.02em}
+.nav .nav-links a:hover{color:#F2EFE6}
+.nav .nav-links .btn-contact{background:#F2EFE6;color:#0C0C0B;padding:9px 20px;border-radius:4px;font-weight:600;font-size:14px;transition:opacity .15s}
+.nav .nav-links .btn-contact:hover{opacity:.88;color:#0C0C0B}
+@media(max-width:768px){.nav-inner{padding:16px 20px}.nav-links{gap:20px}}
 </style>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <!-- NAV -->
-<div style="border-bottom:1px solid #1A1A17">
-  <div style="max-width:900px;margin:0 auto;padding:18px 32px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
-    <a href="/" style="display:flex;align-items:center;gap:10px;color:#B9B5A8;font-size:14px">
-      <span style="font-family:'Oswald',sans-serif;font-size:16px;font-weight:600;letter-spacing:.08em;text-transform:uppercase">HBL</span>
-      <span style="color:#34332E">|</span>
-      <span>Clear Prop</span>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="Honey Badger Laboratories home">
+      <img src="/images/hbl-badger-mark.png" alt="HBL mark" class="nav-logo-mark" width="52" height="52">
+      <span class="nav-wordmark">Honey Badger<br>Laboratories</span>
     </a>
-    <div style="display:flex;gap:28px;align-items:center">
-      <a class="nav-link" href="/clearprop/privacy.html">Privacy Policy</a>
-      <a class="nav-link" href="/clearprop/support.html">Support</a>
+    <div class="nav-links">
+      <a href="/#ventures">Portfolio</a>
+      <a href="/#contact" class="btn-contact">Contact</a>
     </div>
   </div>
-</div>
+</nav>
 
 <!-- CONTENT -->
 <div style="max-width:900px;margin:0 auto;padding:80px 32px 120px">
@@ -60,18 +77,6 @@ h1{font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;font
     <span class="btn">View &rarr;</span>
   </a>
 
-</div>
-
-<!-- FOOTER -->
-<div style="border-top:1px solid #1A1A17">
-  <div style="max-width:900px;margin:0 auto;padding:24px 32px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;color:#6E6B62;font-size:13px">
-    <span>&copy; 2026 Honey Badger Laboratories LLC</span>
-    <div style="display:flex;gap:24px">
-      <a href="/clearprop/privacy.html" style="color:#8F8C80">Privacy Policy</a>
-      <a href="/clearprop/support.html" style="color:#8F8C80">Support</a>
-      <a href="/" style="color:#8F8C80">honeybadgerlabs.io</a>
-    </div>
-  </div>
 </div>
 
 </body>
