@@ -56,10 +56,12 @@ a{color:inherit;text-decoration:none}
 
 /* VENTURES */
 .ventures-bg{background:#0E0E0D;border-top:1px solid #1E1E1A;border-bottom:1px solid #1E1E1A}
-.venture-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;align-items:center;justify-items:center;max-width:720px;margin:0 auto}
-.venture-tile{display:flex;align-items:center;justify-content:center;width:100%;padding:40px 32px;border-radius:8px;background:#141412;border:1px solid #222220;transition:border-color .2s,transform .15s}
-.venture-tile:hover{border-color:#3A3A30;transform:scale(1.03)}
-.venture-logo{max-height:100px;max-width:220px;object-fit:contain}
+.venture-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:56px 48px;max-width:800px;margin:0 auto}
+.venture-tile{display:flex;flex-direction:column;align-items:center;text-align:center;text-decoration:none;transition:transform .15s}
+.venture-tile:hover{transform:scale(1.04)}
+.venture-logo{height:100px;width:auto;object-fit:contain;margin-bottom:16px}
+.venture-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px;text-transform:uppercase;letter-spacing:0.04em;color:#F2EFE6;margin-bottom:6px}
+.venture-desc{font-size:14px;color:#8F8C7A;line-height:1.5;max-width:280px}
 
 
 /* ABOUT */
@@ -142,15 +144,23 @@ a{color:inherit;text-decoration:none}
       <div class="venture-grid">
         <a href="https://getgriddown.com" class="venture-tile" target="_blank" rel="noopener">
           <img src="/images/griddown-logo.png" alt="GRIDDOWN" class="venture-logo">
+          <div class="venture-name">GRIDDOWN</div>
+          <div class="venture-desc">Offline AI knowledge system on a thumb drive.</div>
         </a>
         <a href="#contact" class="venture-tile">
           <img src="/images/dronewatch-logo.png" alt="DroneWatch" class="venture-logo">
+          <div class="venture-name">DroneWatch</div>
+          <div class="venture-desc">Passive drone detection using Remote ID.</div>
         </a>
         <a href="/clearprop/" class="venture-tile">
           <img src="/images/clearprop-logo.png" alt="Clear Prop" class="venture-logo">
+          <div class="venture-name">Clear Prop</div>
+          <div class="venture-desc">FAA Part 107 exam prep for drone pilots.</div>
         </a>
         <a href="https://hblconsulting.io" class="venture-tile" target="_blank" rel="noopener">
           <img src="/images/hbl-consulting-logo.png" alt="HBL Consulting" class="venture-logo">
+          <div class="venture-name">HBL Consulting</div>
+          <div class="venture-desc">Technology consulting for small businesses.</div>
         </a>
       </div>
     </div>
