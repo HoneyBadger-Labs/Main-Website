@@ -22,9 +22,6 @@ a{color:inherit;text-decoration:none}
 .nav-wordmark{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:18px;letter-spacing:0.08em;text-transform:uppercase;line-height:1}
 
 /* BRAND SECTION */
-.brand-section{padding:72px 32px;display:flex;justify-content:center;align-items:center;border-bottom:1px solid #1E1E1A}
-.brand-inner{position:relative;display:flex;justify-content:center;align-items:center}
-.brand-badge{width:220px;height:220px;object-fit:contain}
 .bracket{position:absolute;width:52px;height:52px;opacity:0.35}
 .bracket-tl{top:-16px;left:-16px;border-top:2px solid #F2EFE6;border-left:2px solid #F2EFE6}
 .bracket-tr{top:-16px;right:-16px;border-top:2px solid #F2EFE6;border-right:2px solid #F2EFE6}
@@ -59,22 +56,10 @@ a{color:inherit;text-decoration:none}
 
 /* VENTURES */
 .ventures-bg{background:#0E0E0D;border-top:1px solid #1E1E1A;border-bottom:1px solid #1E1E1A}
-.venture-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(460px,1fr));gap:20px}
-.venture-card{background:#141412;border:1px solid #222220;border-radius:8px;padding:32px;display:flex;flex-direction:column;gap:12px;transition:border-color .2s}
-.venture-card:hover{border-color:#3A3A30}
-.venture-logo-wrap{height:72px;display:flex;align-items:center;margin-bottom:4px}
-.venture-logo{max-height:64px;max-width:200px;object-fit:contain;object-position:left center}
-.venture-logo.invert{filter:invert(1) brightness(0.9)}
-.venture-header{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
-.venture-name{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:26px;text-transform:uppercase;letter-spacing:0.02em}
-.badge{font-size:11px;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;padding:4px 10px;border-radius:999px;white-space:nowrap;flex-shrink:0}
-.badge-active{background:#1C2B1C;color:#7AC47A}
-.badge-beta{background:#2A2410;color:#E0A030}
-.badge-dev{background:#1A2030;color:#7AABE0}
-.badge-soon{background:#2A2410;color:#E0A030}
-.venture-desc{color:#9B9888;font-size:15px;line-height:1.6;margin:0}
-.venture-link{color:#C8C4B0;font-size:14px;font-weight:500;margin-top:4px;transition:color .15s}
-.venture-link:hover{color:#F2EFE6}
+.venture-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;align-items:center;justify-items:center}
+.venture-tile{display:flex;align-items:center;justify-content:center;padding:24px;border-radius:8px;background:#141412;border:1px solid #222220;transition:border-color .2s,transform .15s}
+.venture-tile:hover{border-color:#3A3A30;transform:scale(1.04)}
+.venture-logo{max-height:72px;max-width:160px;object-fit:contain}
 
 /* APPROACH */
 .approach-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:36px}
@@ -87,16 +72,10 @@ a{color:inherit;text-decoration:none}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
 .about-photo-wrap{position:relative;overflow:hidden;border-radius:8px;aspect-ratio:3/4;max-width:400px}
 .about-photo{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
-.about-name-overlay{position:absolute;bottom:0;left:0;right:0;padding:28px 24px 20px;background:linear-gradient(transparent,rgba(12,12,11,0.92))}
-.about-name-heading{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(44px,7vw,80px);text-transform:uppercase;line-height:0.9;color:#F2EFE6;margin:0}
 .about-right{display:flex;flex-direction:column;gap:40px}
 .about-bio{font-size:17px;color:#C8C4B0;line-height:1.75}
 .about-bio p{margin:0 0 20px}
 .about-bio p:last-child{margin:0}
-.about-stats{display:flex;flex-direction:column;gap:32px}
-.stat-item{border-left:2px solid #2E2E27;padding-left:20px}
-.stat-num{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:40px;line-height:1;color:#F2EFE6}
-.stat-label{font-size:13px;color:#6B6B5A;text-transform:uppercase;letter-spacing:0.1em;font-weight:500;margin-top:4px}
 
 /* CONTACT */
 .contact-bg{background:#0E0E0D;border-top:1px solid #1E1E1A}
@@ -121,11 +100,9 @@ a{color:inherit;text-decoration:none}
   .nav-links{gap:20px}
   .hero{padding:64px 20px 60px}
   .section{padding:64px 20px}
-  .venture-grid{grid-template-columns:1fr}
+  .venture-grid{grid-template-columns:repeat(2,1fr)}
   .about-grid{grid-template-columns:1fr}
   .about-photo-wrap{max-width:100%}
-  .brand-section{padding:48px 20px}
-  .brand-badge{width:160px;height:160px}
   .hero-headline .line1,.hero-headline .line2,.hero-headline .line3{font-size:clamp(44px,13vw,80px)}
 }
 </style>
@@ -157,23 +134,8 @@ a{color:inherit;text-decoration:none}
       <span class="line3">businesses.</span>
     </h1>
     <p class="hero-body">Honey Badger Laboratories is a venture studio. We find problems worth solving, build the product, and take it to market. The ventures that work grow into companies of their own.</p>
-    <div class="hero-ctas">
-      <a href="#ventures" class="btn-primary">See what we're building</a>
-      <a href="#about" class="btn-secondary">Who's behind it</a>
-    </div>
   </div>
 </section>
-
-<!-- HBL BRAND MARK SECTION -->
-<div class="brand-section">
-  <div class="brand-inner">
-    <div class="bracket bracket-tl"></div>
-    <div class="bracket bracket-tr"></div>
-    <img src="/images/hbl-mark-white.png" alt="Honey Badger Laboratories" class="brand-badge">
-    <div class="bracket bracket-bl"></div>
-    <div class="bracket bracket-br"></div>
-  </div>
-</div>
 
 <!-- VENTURES -->
 <section id="ventures" class="ventures-bg">
@@ -184,55 +146,18 @@ a{color:inherit;text-decoration:none}
       <p class="section-sub">Four active ventures. Each one solves a specific problem for a specific person.</p>
 
       <div class="venture-grid">
-
-        <div class="venture-card">
-          <div class="venture-logo-wrap">
-            <img src="/images/griddown-logo.png" alt="GRIDDOWN" class="venture-logo">
-          </div>
-          <div class="venture-header">
-            <div class="venture-name">GRIDDOWN</div>
-            <span class="badge badge-beta">Beta · Waitlist</span>
-          </div>
-          <p class="venture-desc">An offline AI knowledge system on a thumb drive. Cited answers from vetted sources — zero internet, zero telemetry, zero cloud. For when the usual way stops working.</p>
-          <a href="https://getgriddown.com" class="venture-link" target="_blank" rel="noopener">getgriddown.com →</a>
-        </div>
-
-        <div class="venture-card">
-          <div class="venture-logo-wrap">
-            <img src="/images/dronewatch-logo.png" alt="DroneWatch" class="venture-logo invert">
-          </div>
-          <div class="venture-header">
-            <div class="venture-name">DroneWatch</div>
-            <span class="badge badge-dev">In development</span>
-          </div>
-          <p class="venture-desc">Passive Remote ID drone detection. Low-cost sensor nodes stream publicly broadcast signals to a live airspace map. Know what's flying over your property.</p>
-          <a href="#contact" class="venture-link">Follow the build →</a>
-        </div>
-
-        <div class="venture-card">
-          <div class="venture-logo-wrap">
-            <img src="/images/hbl-mark-white.png" alt="Clear Prop" class="venture-logo">
-          </div>
-          <div class="venture-header">
-            <div class="venture-name">Clear Prop</div>
-            <span class="badge badge-soon">Coming to App Store</span>
-          </div>
-          <p class="venture-desc">FAA Part 107 exam prep for drone pilots. Focused drills, real knowledge, one-time price. No subscription, no fluff — just what you need to pass the test.</p>
-          <a href="/clearprop/" class="venture-link">Legal &amp; support →</a>
-        </div>
-
-        <div class="venture-card">
-          <div class="venture-logo-wrap">
-            <img src="/images/hbl-consulting-logo.png" alt="HBL Consulting" class="venture-logo">
-          </div>
-          <div class="venture-header">
-            <div class="venture-name">HBL Consulting</div>
-            <span class="badge badge-active">Taking clients</span>
-          </div>
-          <p class="venture-desc">Straight-talking technology consulting for small businesses and government contractors. Vendor oversight, project rescue, and AI integration — without the enterprise markup.</p>
-          <a href="https://hblconsulting.io" class="venture-link" target="_blank" rel="noopener">hblconsulting.io →</a>
-        </div>
-
+        <a href="https://getgriddown.com" class="venture-tile" target="_blank" rel="noopener">
+          <img src="/images/griddown-logo.png" alt="GRIDDOWN" class="venture-logo">
+        </a>
+        <a href="#contact" class="venture-tile">
+          <img src="/images/dronewatch-logo.png" alt="DroneWatch" class="venture-logo">
+        </a>
+        <a href="/clearprop/" class="venture-tile">
+          <img src="/images/hbl-mark-white.png" alt="Clear Prop" class="venture-logo">
+        </a>
+        <a href="https://hblconsulting.io" class="venture-tile" target="_blank" rel="noopener">
+          <img src="/images/hbl-consulting-logo.png" alt="HBL Consulting" class="venture-logo">
+        </a>
       </div>
     </div>
   </div>
@@ -276,39 +201,18 @@ a{color:inherit;text-decoration:none}
 <section id="about" style="background:#0E0E0D;border-top:1px solid #1E1E1A">
   <div class="section">
     <div class="section-inner">
-      <div class="section-label">Leadership</div>
+      <div class="section-label">Founder</div>
       <h2 class="section-title">One founder.<br>No committee.</h2>
 
       <div class="about-grid">
         <div class="about-photo-wrap">
           <img src="/images/jonathan-and-badger.jpg" alt="Jonathan and Badger" class="about-photo">
-          <div class="about-name-overlay">
-            <h3 class="about-name-heading">Jonathan</h3>
-          </div>
         </div>
         <div class="about-right">
           <div class="about-bio">
-            <p><strong style="color:#F2EFE6">Jonathan Sherlin</strong> started Honey Badger Laboratories to take ideas far enough to find out whether they work. His background in IT, project management, and data analytics taught him how the pieces of a complex system fit together. He uses AI the way a builder uses any good tool — to move faster and take on work that used to require a whole team.</p>
+            <p><strong style="color:#F2EFE6">Jonathan</strong> started Honey Badger Laboratories to take ideas far enough to find out whether they work. His background in IT, project management, and data analytics taught him how the pieces of a complex system fit together. He uses AI the way a builder uses any good tool — to move faster and take on work that used to require a whole team.</p>
             <p>The lab builds practical tools for people who like to be prepared and do things themselves. For Jonathan, the interesting part starts when there's something people can actually try. That's when he finds out which assumptions hold up, what needs to change, and which ideas are worth turning into businesses of their own.</p>
             <p>The name comes from Badger, his first retired racing greyhound.</p>
-          </div>
-          <div class="about-stats">
-            <div class="stat-item">
-              <div class="stat-num">4</div>
-              <div class="stat-label">Active ventures</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-num">1</div>
-              <div class="stat-label">Founder</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-num">0</div>
-              <div class="stat-label">Outside investors</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-num">NC</div>
-              <div class="stat-label">Elizabeth City, North Carolina</div>
-            </div>
           </div>
         </div>
       </div>
@@ -324,9 +228,9 @@ a{color:inherit;text-decoration:none}
         <div class="section-label">Contact</div>
         <h2 class="section-title">Work with us.</h2>
         <p>Got a problem worth solving, a project that needs rescuing, or want to follow what we're building? Reach out directly.</p>
-        <a href="mailto:hello@honeybadgerlabs.io" class="btn-email">
+        <a href="mailto:info@honeybadgerlabs.io" class="btn-email">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><rect x="2" y="5" width="16" height="12" rx="2"/><path d="M2 7l8 6 8-6"/></svg>
-          hello@honeybadgerlabs.io
+          info@honeybadgerlabs.io
         </a>
       </div>
     </div>
